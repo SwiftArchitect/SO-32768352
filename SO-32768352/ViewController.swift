@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  SO-32768352
 //
-//  Copyright © 2017 Xavier Schott
+//  Copyright © 2017, 2018 Xavier Schott
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
 //  in the Software without restriction, including without limitation the rights
@@ -88,7 +88,7 @@ class ViewController: UIViewController {
         performSelector(inBackground: #selector(ViewController.playInBackground(_:)), with: sender)
     }
 
-    func playInBackground(_ sender: AnyObject) {
+    @objc func playInBackground(_ sender: AnyObject) {
         do {
             var audioPlayer:AVAudioPlayer!
             try audioPlayer = AVAudioPlayer(contentsOf: audioRecorder.url)
